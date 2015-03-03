@@ -1,0 +1,7 @@
+app:
+  command: npm run live
+  build: ./app
+  ports:
+    - 8080:8080
+  volumes:
+    - ./app/src:/srv/app/src
