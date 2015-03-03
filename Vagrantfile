@@ -23,8 +23,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
       python get-pip.py
 
-      /usr/local/bin/pip install -U --pre docker-compose
-      /usr/local/bin/pip uninstall requests
-      /usr/local/bin/pip install requests==2.4.3
+      /usr/local/bin/pip install -q -U docker-compose
+      yes | /usr/local/bin/pip uninstall -q requests
+      /usr/local/bin/pip install -q requests==2.4.3
     eos
 end
